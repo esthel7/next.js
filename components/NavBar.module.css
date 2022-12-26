@@ -1,0 +1,7 @@
+.active{
+    color:tomato;
+}
+
+.link{
+    text-decoration: none; /*a태그의 경우 밑줄 지워줄 수 있음*/
+}
