@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# env추가해야 git에 안올라감
+.env
