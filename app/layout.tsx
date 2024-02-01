@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Navigation } from '../components';
+import { Navigation } from '@components';
 
 export const metadata: Metadata = {
   title: {
