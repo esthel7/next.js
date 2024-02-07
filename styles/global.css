@@ -143,7 +143,10 @@ body {
     sans-serif;
   color: white;
   font-size: 18px;
+  max-width: 90%;
+  margin: 0 auto;
   padding-top: 120px;
+  padding-bottom: 50px;
 }
 
 a {
