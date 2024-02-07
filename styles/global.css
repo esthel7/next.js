@@ -143,14 +143,15 @@ body {
     sans-serif;
   color: white;
   font-size: 18px;
-  padding-top: 150px;
+  padding-top: 120px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  opacity: 0.8;
 }
 
 a:hover {
-  text-decoration: underline;
+  opacity: 1;
 }
