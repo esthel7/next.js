@@ -6,7 +6,7 @@ import styles from '@styles/movie.module.css';
 
 interface MovieProps {
   title: string;
-  id: string;
+  id: number;
   poster_path: string;
 }
 
