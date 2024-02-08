@@ -1,4 +1,4 @@
-// 'use client';
+import { Language } from '@components';
 import styles from '@styles/search.module.css';
 
 export const metadata = {
@@ -25,11 +25,7 @@ export default function Search() {
           <input type="submit" name="submit" value="✅" />
         </div>
 
-        <div className={`${styles.container} ${styles.miniContainer}`}>
-          <span>언어</span>
-          <input type="text" name="언어" placeholder="Type here..." />
-          <input type="submit" name="submit" value="✅" />
-        </div>
+        <Language />
 
         <div className={`${styles.container} ${styles.miniContainer}`}>
           <span>이후 개봉</span>

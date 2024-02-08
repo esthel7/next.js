@@ -16,6 +16,7 @@
   background-color: #2d2d2d;
   font-size: 25px;
   color: white;
+  border: none;
 }
 
 .container input[type='submit']:hover {
@@ -51,13 +52,67 @@
 }
 
 .miniContainer input[type='number'],
-.miniContainer input[type='text'] {
+.select {
   width: 100%;
 }
 
 .miniContainer input[type='submit'] {
   width: min-content;
   margin-left: auto;
+}
+
+.select {
+  position: relative;
+}
+
+.select > div {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select ul {
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: calc(100% - 40px);
+  top: 90px;
+  height: 250px;
+  overflow-y: auto;
+}
+
+.select ul::-webkit-scrollbar {
+  background-color: #2d2d2d;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.select ul::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.select li {
+  border-bottom: 1px solid white;
+  background-color: #2d2d2d;
+  cursor: pointer;
+}
+
+.select li:last-child {
+  border-bottom: none;
+}
+
+.select li div {
+  padding: 5px;
+}
+
+.miniContainer input[type='date'] {
+  font-family: inherit;
 }
 
 @media (max-width: 1300px) {
@@ -102,5 +157,10 @@
   .titleContainer input[type='submit'] {
     margin-top: 20px;
     float: right;
+  }
+
+  .select ul {
+    top: 80px;
+    width: calc(100% - 20px);
   }
 }
