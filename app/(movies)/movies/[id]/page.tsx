@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
+import { useGetAMovie } from '@hooks';
 import { MovieInfo, MovieVideos } from '@components';
-import { getMovie } from '@components/movie-info';
 
 interface Params {
   params: { id: string };
 }
 
 export async function generateMetadata({ params: { id } }: Params) {
-  const movie = await getMovie(id);
+  const getAMovie = await useGetAMovie(id);
+  const movie = await getAMovie();
   return {
     title: movie.title
   };

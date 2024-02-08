@@ -15,8 +15,7 @@ interface Video {
 }
 
 async function getVideos(id: string) {
-  const response = await fetch(`${API_URL}/${id}/videos`);
-  return response.json();
+  return await fetch(`${API_URL}/${id}/videos`).then(res => res.json());
 }
 
 export default async function MovieVideos({ id }: { id: string }) {
