@@ -23,6 +23,8 @@
       "@hooks/*": ["hooks/*"],
       "@components": ["components/index"],
       "@components/*": ["components/*"],
+      "@states": ["states/index"],
+      "@states/*": ["states/*"],
       "@app/*": ["app/*"],
       "@styles/*": ["styles/*"]
     }

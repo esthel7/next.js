@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Footer, Navigation } from '@components';
 import '@styles/global.css';
+import RecoilRootWrapper from './RecoilRootWrapper';
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="kr">
       <body>
         <Navigation />
-        {children}
+        <RecoilRootWrapper>{children}</RecoilRootWrapper>
         <Footer />
       </body>
     </html>

@@ -20,6 +20,8 @@
     "^@hooks/(.*)$",
     "^@components",
     "^@components/(.*)$",
+    "^@states",
+    "^@states/(.*)$",
     "^@styles/(.*)$",
     "^[./]"
   ],
