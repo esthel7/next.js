@@ -4,6 +4,7 @@
   gap: 20px;
   cursor: pointer;
   place-items: center;
+  position: relative;
 }
 
 .movie img {
@@ -24,4 +25,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.movie p {
+  position: absolute;
+  top: 0;
+  background-color: #2d2d2dbf;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  display: none;
+  overflow: visible;
+  z-index: 10;
 }
