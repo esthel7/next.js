@@ -83,6 +83,7 @@
   top: 90px;
   height: 250px;
   overflow-y: auto;
+  z-index: 10;
 }
 
 .select ul::-webkit-scrollbar {
