@@ -1,5 +1,5 @@
 import { useGetAMovie } from '@hooks';
-import styles from '@styles/movie-info.module.css';
+import styles from '@styles/movieInfo.module.css';
 
 export default async function MovieInfo({ id }: { id: string }) {
   const getAMovie = await useGetAMovie(id);
