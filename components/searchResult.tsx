@@ -36,7 +36,8 @@ async function fetchMovie({ title, star, language, date, setMovies }) {
   const moviesArray = movies.filter(
     (movie: MovieType) =>
       (title !== ''
-        ? movie.title.includes(title) || movie.original_title.includes(title)
+        ? movie.title.toLowerCase().includes(title.toLowerCase()) ||
+          movie.original_title.toLowerCase().includes(title.toLowerCase())
         : true) &&
       (star !== 0 ? movie.vote_average >= star : true) &&
       (language !== 'Choose' ? movie.original_language === language : true) &&
