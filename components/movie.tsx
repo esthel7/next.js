@@ -10,7 +10,7 @@ interface MovieProps {
   poster_path: string;
 }
 
-export default function movie({ title, id, poster_path }: MovieProps) {
+export default function Movie({ title, id, poster_path }: MovieProps) {
   const router = useRouter();
   const showDetail = () => {
     router.push(`/movies/${id}`);
