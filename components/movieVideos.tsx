@@ -1,4 +1,3 @@
-import { API_URL } from '@app/constants';
 import styles from '@styles/movieVideos.module.css';
 
 interface Video {
@@ -15,7 +14,9 @@ interface Video {
 }
 
 async function getVideos(id: string) {
-  return await fetch(`${API_URL}/${id}/videos`).then(res => res.json());
+  return await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${id}/videos`).then(
+    res => res.json()
+  );
 }
 
 export default async function MovieVideos({ id }: { id: string }) {
