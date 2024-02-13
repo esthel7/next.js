@@ -9,6 +9,8 @@
 }
 
 .container iframe {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   opacity: 0.8;
   transition: opacity 0.2s ease-in-out;
@@ -16,4 +18,17 @@
 
 .container iframe:hover {
   opacity: 1;
+}
+
+@media (max-width: 2000px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container iframe {
+    width: auto;
+    margin: 0 auto;
+  }
 }
