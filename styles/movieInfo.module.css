@@ -58,4 +58,8 @@
     word-break: break-all;
     overflow-wrap: break-word;
   }
+
+  .info h1 {
+    font-size: 30px;
+  }
 }
