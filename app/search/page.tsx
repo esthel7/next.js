@@ -5,7 +5,6 @@ import {
   StarInput,
   TitleInput
 } from '@components';
-import styles from '@styles/search.module.css';
 
 export const metadata = {
   title: 'Search'
@@ -14,27 +13,23 @@ export const metadata = {
 export default function Search() {
   return (
     <>
-      <div className={styles.search}>
-        <div
-          className={`${styles.container} ${styles.containerBox} ${styles.titleContainer}`}
-        >
+      <div className="pb-12">
+        <div className="searchContainer searchContainerBox">
           <span>제목</span>
-          <div>
+          <div className="w-full flex flex-row justify-between items-center 100:block">
             <TitleInput />
           </div>
         </div>
 
-        <div className={`${styles.containerBox} ${styles.containerGroup}`}>
-          <div className={`${styles.container} ${styles.miniContainer}`}>
+        <div className="searchContainerBox flex justify-between gap-5 200:flex-wrap 125:flex-col">
+          <div className="searchContainer searchMiniContainer">
             <span>해당 별점 이상</span>
             <StarInput />
           </div>
 
-          <Language
-            styles={[styles.container, styles.miniContainer, styles.select]}
-          />
+          <Language />
 
-          <div className={`${styles.container} ${styles.miniContainer}`}>
+          <div className="searchContainer searchMiniContainer 200:basis-full">
             <span>이후 개봉</span>
             <DateInput />
           </div>
