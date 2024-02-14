@@ -7,10 +7,20 @@ module.exports = {
         video: 'repeat(auto-fit, minmax(250px, 1fr))'
       },
       spacing: {
-        144: '36rem'
+        110: '27.5rem',
+        144: '36rem',
+        150: '37.5rem',
+        200: '50rem',
+        300: '75rem',
+        '70%': '70%',
+        '90%': '90%'
       },
       screens: {
-        144: { max: '36rem' }
+        110: { max: '27.5rem' },
+        144: { max: '36rem' },
+        150: { max: '37.5rem' },
+        200: { max: '50rem' },
+        300: { max: '75rem' }
       }
     }
   },

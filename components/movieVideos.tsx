@@ -23,7 +23,7 @@ export default async function MovieVideos({ id }: { id: string }) {
     <div className="mx-auto mt-24 pb-24 grid grid-cols-video gap-5">
       {videos.map((video: Video) => (
         <iframe
-          className="w-full h-auto rounded-small opacity-80 transition-opacity duration-200 ease-in-out hover:opacity-100 144:w-auto 144:mx-auto"
+          className="w-full h-auto rounded-lg opacity-80 transition-opacity duration-200 ease-in-out hover:opacity-100 144:w-auto 144:mx-auto"
           key={video.id}
           src={`https://youtube.com/embed/${video.key}`}
           title={video.name}
