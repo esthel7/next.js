@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 50px;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -13,6 +12,7 @@
 }
 
 .info {
+  text-align: right;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
