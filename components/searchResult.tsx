@@ -12,7 +12,6 @@ import {
   TitleRecoil
 } from '@states';
 import homeStyles from '@styles/home.module.css';
-import styles from '@styles/searchResult.module.css';
 
 function afterDate(release_date: string, date: string) {
   const [rYear, rMonth, rDay] = release_date.split('-').map(Number);
@@ -54,6 +53,9 @@ export default function SearchResult() {
   const language = useRecoilValue(LanguageRecoil);
   const date = useRecoilValue(DateRecoil);
 
+  const alert =
+    'w-max mb-18 text-2xl italic relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-1 after:bg-red-500 after:rounded-md';
+
   useEffect(() => {
     if (title !== '' || star !== 0 || language !== 'Choose' || date !== '') {
       fetchMovie({ title, star, language, date, setMovies }).then(() =>
@@ -79,10 +81,10 @@ export default function SearchResult() {
             ))}
           </div>
         ) : (
-          <div className={styles.alert}>not exist</div>
+          <div className={alert}>not exist</div>
         )
       ) : (
-        <div className={styles.alert}>no search</div>
+        <div className={alert}>no search</div>
       )}
     </>
   );

@@ -7,6 +7,7 @@ module.exports = {
         video: 'repeat(auto-fit, minmax(250px, 1fr))'
       },
       spacing: {
+        18: '4.5rem',
         110: '27.5rem',
         144: '36rem',
         150: '37.5rem',
