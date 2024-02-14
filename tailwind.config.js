@@ -19,8 +19,10 @@ module.exports = {
       },
       screens: {
         110: { max: '27.5rem' },
+        '110-150': { min: '27.5rem', max: '37.5rem' },
         144: { max: '36rem' },
         150: { max: '37.5rem' },
+        '150-200': { min: '37.5rem', max: '50rem' },
         176: { max: '44rem' },
         200: { max: '50rem' },
         300: { max: '75rem' }

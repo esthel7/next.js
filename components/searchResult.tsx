@@ -11,7 +11,6 @@ import {
   StarRecoil,
   TitleRecoil
 } from '@states';
-import homeStyles from '@styles/home.module.css';
 
 function afterDate(release_date: string, date: string) {
   const [rYear, rMonth, rDay] = release_date.split('-').map(Number);
@@ -70,7 +69,7 @@ export default function SearchResult() {
     <>
       {view ? (
         movies.length ? (
-          <div className={homeStyles.container}>
+          <div className="homeContainer">
             {movies.map((movie: MovieType) => (
               <Movie
                 key={movie.id}
