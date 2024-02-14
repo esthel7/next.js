@@ -21,8 +21,15 @@ export function TitleInput() {
         type="text"
         name="제목"
         placeholder="Type here..."
+        className="w-4/5 100:w-full"
       />
-      <input type="submit" name="submit" value="✅" onClick={onSubmit} />
+      <input
+        type="submit"
+        name="submit"
+        value="✅"
+        onClick={onSubmit}
+        className="100:mt-5 100:float-right"
+      />
     </>
   );
 }
@@ -54,6 +61,7 @@ export function StarInput() {
         name="별점"
         placeholder="Number"
         onKeyDown={validCheck}
+        className="w-full"
       />
       <input type="submit" name="submit" value="✅" onClick={onSubmit} />
     </>

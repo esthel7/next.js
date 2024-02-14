@@ -5,7 +5,7 @@ import { useRecoilState } from 'recoil';
 import { LanguageRecoil } from '@states';
 import LanguageList from './languageList';
 
-export default function Language({ styles }: { styles: Array<string> }) {
+export default function Language() {
   const [language, setLanguage] = useRecoilState(LanguageRecoil);
   const [view, setView] = useState(false);
   const [select, setSelect] = useState(language);
@@ -13,12 +13,13 @@ export default function Language({ styles }: { styles: Array<string> }) {
   const onSubmit = () => setLanguage(select);
 
   return (
-    <div className={styles.join(' ')}>
+    <div className="searchContainer searchMiniContainer w-full relative">
       <span>언어</span>
       <div
         onClick={() => {
           setView(!view);
         }}
+        className="border border-white rounded-md flex justify-between items-center cursor-pointer"
       >
         <p>{select}</p>
         <span>🔻</span>

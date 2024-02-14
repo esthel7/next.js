@@ -6,15 +6,18 @@ export default function LanguageList({ setView, setSelect }) {
     };
 
     return (
-      <li onClick={viewLanguage}>
-        <div>{ko}</div>
-        <div>{en}</div>
+      <li
+        onClick={viewLanguage}
+        className="border border-b-white bg-darkGray cursor-pointer"
+      >
+        <div className="p-1">{ko}</div>
+        <div className="p-1">{en}</div>
       </li>
     );
   };
 
   return (
-    <ul>
+    <ul className="scroll h-64 absolute border border-white rounded-md w-[calc(100%-40px)] top-24 overflow-y-auto z-10 100:top-20 100:w-[calc(100%-20px)]">
       <Name ko={'아랍어'} en={'ar'} />
       <Name ko={'불가리아어'} en={'bg'} />
       <Name ko={'크로아티아어'} en={'hr'} />
