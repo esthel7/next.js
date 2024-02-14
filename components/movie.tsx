@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
-import styles from '@styles/movie.module.css';
 
 interface MovieProps {
   title: string;
@@ -28,14 +27,26 @@ export default function Movie({ title, id, poster_path }: MovieProps) {
   };
 
   return (
-    <div className={styles.movie}>
-      <img src={poster_path} alt={title} onClick={showDetail} />
-      <p ref={pRef}>{title}</p>
+    <div className="grid grid-rows-[1fr,auto] gap-5 cursor-pointer place-items-center relative">
+      <img
+        src={poster_path}
+        alt={title}
+        onClick={showDetail}
+        className="max-w-full min-h-full rounded-lg transition-opacity duration-300 ease-in-out opacity-70 hover:opacity-100"
+      />
+
+      <p
+        ref={pRef}
+        className="absolute top-0 bg-darkGray text-white text-center p-1 rounded-sm hidden overflow-visible z-10"
+      >
+        {title}
+      </p>
 
       <Link
         href={`/movies/${id}`}
         onMouseOver={tooltip}
         onMouseOut={hideTooltip}
+        className="w-full text-center truncate"
       >
         {title}
       </Link>
