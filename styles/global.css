@@ -61,3 +61,9 @@
     vertical-align: baseline;
   }
 }
+
+@layer components {
+  .homeContainer {
+    @apply w-full mx-auto pb-18 grid grid-cols-5 gap-6 150-200:grid-cols-4 110-150:grid-cols-3 110:grid-cols-2;
+  }
+}
