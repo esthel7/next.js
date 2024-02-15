@@ -37,7 +37,7 @@ export default function Movie({ title, id, poster_path }: MovieProps) {
 
       <p
         ref={pRef}
-        className="absolute top-0 bg-darkGray text-white text-center p-1 rounded-sm hidden overflow-visible z-10"
+        className="absolute top-0 bg-darkGray opacity-80 text-white text-center p-1 rounded-md hidden overflow-visible z-10"
       >
         {title}
       </p>
