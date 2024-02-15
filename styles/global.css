@@ -3,51 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-  }
-
   body {
-    background-color: black;
-    @apply font-sans;
-    color: white;
-    font-size: 18px;
-    max-width: 90%;
-    margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 50px;
-  }
-
-  div {
-    box-sizing: border-box;
+    @apply font-sans bg-black text-white text-lg max-w-90% mx-auto pt-32 pb-12;
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-  a:hover {
-    opacity: 1;
+    @apply opacity-80 hover:opacity-100;
   }
 
   input {
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  ul {
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    @apply cursor-pointer;
   }
 }
 
