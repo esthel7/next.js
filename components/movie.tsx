@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
@@ -28,10 +29,12 @@ export default function Movie({ title, id, poster_path }: MovieProps) {
 
   return (
     <div className="grid grid-rows-[1fr,auto] gap-5 cursor-pointer place-items-center relative">
-      <img
+      <Image
         src={poster_path}
         alt={title}
         onClick={showDetail}
+        width={1000}
+        height={2000}
         className="max-w-full min-h-full rounded-lg transition-opacity duration-300 ease-in-out opacity-70 hover:opacity-100"
       />
 
