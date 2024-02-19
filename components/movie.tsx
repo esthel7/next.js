@@ -33,8 +33,8 @@ export default function Movie({ title, id, poster_path }: MovieProps) {
         src={poster_path}
         alt={title}
         onClick={showDetail}
-        width={1000}
-        height={2000}
+        width={400}
+        height={600}
         className="max-w-full min-h-full rounded-lg transition-opacity duration-300 ease-in-out opacity-70 hover:opacity-100"
       />
 
