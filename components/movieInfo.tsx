@@ -10,8 +10,9 @@ export default async function MovieInfo({ id }: { id: string }) {
       <Image
         src={movie.poster_path}
         alt={movie.title}
-        width={1000}
-        height={2000}
+        priority
+        width={400}
+        height={600}
         className="rounded-3xl max-w-70% place-self-center 300:max-w-90% 200:max-w-full 110:word-break"
       />
 
