@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
+import { Base64 } from '@app/constants';
 
 interface MovieProps {
   title: string;
@@ -33,6 +34,8 @@ export default function Movie({ title, id, poster_path }: MovieProps) {
         src={poster_path}
         alt={title}
         onClick={showDetail}
+        placeholder="blur"
+        blurDataURL={Base64}
         width={400}
         height={600}
         className="max-w-full min-h-full rounded-lg transition-opacity duration-300 ease-in-out opacity-70 hover:opacity-100"
