@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Base64 } from '@app/constants';
 import { useGetAMovie } from '@hooks';
 
 export default async function MovieInfo({ id }: { id: string }) {
@@ -11,6 +12,8 @@ export default async function MovieInfo({ id }: { id: string }) {
         src={movie.poster_path}
         alt={movie.title}
         priority
+        placeholder="blur"
+        blurDataURL={Base64}
         width={400}
         height={600}
         className="rounded-3xl max-w-70% place-self-center 300:max-w-90% 200:max-w-full 110:word-break"
