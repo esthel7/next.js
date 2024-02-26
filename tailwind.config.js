@@ -18,7 +18,6 @@ module.exports = {
         110: { max: '27.5rem' },
         '110-150': { min: '27.5rem', max: '37.5rem' },
         125: { max: '31.25rem' },
-        144: { max: '36rem' },
         150: { max: '37.5rem' },
         '150-200': { min: '37.5rem', max: '50rem' },
         176: { max: '44rem' },
